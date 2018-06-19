@@ -1,0 +1,409 @@
+<style>
+body{
+background-color:#999999;
+background-image: url('http://www.bureauofbetterment.com/wp-content/uploads/2010/11/whitenoise-silver-2560x1600.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+::-webkit-scrollbar {width: 3px; height: 3px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #999999;}
+
+#bigpicture {
+position:absolute;
+border:2px solid #ffffff;
+background-image: url('https://i.imgur.com/gyQu7Ux.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+width:60%;
+height:60%;
+left:20%;
+top:20%;
+}
+
+#line1 {
+position:absolute;
+background-color:#ffffff;
+width:100%;
+height:0.5%;
+top:20%;
+left:0%;
+}
+
+#line2 {
+position:absolute;
+background-color:#ffffff;
+width:100%;
+height:0.5%;
+top:80.1%;
+left:0%;
+}
+
+#line3 {
+position:absolute;
+background-color:#ffffff;
+width:0.25%;
+height:100%;
+top:0%;
+left:20%;
+}
+
+#line4 {
+position:absolute;
+background-color:#ffffff;
+width:0.25%;
+height:100%;
+top:0%;
+left:80%;
+}
+
+#content {
+position:absolute;
+overflow:auto;
+padding:2%;
+border:2px solid #ffffff;
+background-color:#666666;
+width:20%;
+height:70%;
+top:11%;
+left:51%;
+font-family: 'Pathway Gothic One', sans-serif;
+color:#ffffff;
+font-size:1.5vh;
+}
+
+#tabbox1 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.29);
+width:3%;
+height:6%;
+left:22%;
+top:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover,#tabbox5:hover {
+border:2px solid #ffffff;
+background-color:#666666;
+-webkit-transform: rotate(360deg);
+ -moz-transform: rotate(360deg);
+-o-transform: rotate(360deg) ;
+ -ms-transform: rotate(360deg);
+ transform: rotate(360deg) ;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.29);
+width:3%;
+height:6%;
+left:27%;
+top:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.29);
+width:3%;
+height:6%;
+left:32%;
+top:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.29);
+width:3%;
+height:6%;
+left:37%;
+top:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.29);
+width:3%;
+height:6%;
+left:42%;
+top:70%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#title {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.79);
+width:23%;
+height:6%;
+left:22%;
+top:24%;
+text-align:center;
+font-family: 'IM Fell English SC', serif;
+text-transform:uppercase;
+color:#999999;
+font-size:4vh;
+line-height:1.5;
+}
+
+#basicbox {
+position:absolute;
+opacity:0;
+background-color:rgba(102, 102, 102, 0.79);
+padding:1%;
+width:17%;
+height:20%;
+top:38%;
+left:24%;
+text-align:center;
+font-family: 'Pathway Gothic One', sans-serif;
+color:#ffffff;
+font-size:2vh;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox {
+position:absolute;
+border:2px solid #ffffff;
+background-color:rgba(102, 102, 102, 0.79);
+width:23%;
+height:30%;
+top:35%;
+left:22%;
+}
+
+#basicbox:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+img {
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+img:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10 {
+display: none;
+}
+
+.tabs {
+display:block;
+width:100%;
+height:100%;
+text-align:center;
+color:#ffffff;
+font-family: 'Pathway Gothic One', sans-serif;
+text-transform:uppercase;
+font-size:3vh;
+line-height:2;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+color:#999999;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+h1 {
+color:#999999;
+border-left: 6px solid #222222;
+border-right: 6px solid #222222;
+background-color: #333333;
+letter-spacing:5px;
+font-family: 'IM Fell English SC', serif;
+font-size:2vh;
+text-align:center;
+}
+
+b {
+color:#999999;
+font-family: 'Pathway Gothic One', sans-serif;
+text-transform:uppercase;
+font-size:2vh;
+}
+
+i {
+color:#BFFFFF;
+}
+
+a {
+color:#8DE1FF;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Pathway+Gothic+One" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('picbox').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="bigpicture">
+</div>
+<div id="line1">
+</div>
+<div id="line2">
+</div>
+<div id="line3">
+</div>
+<div id="line4">
+</div>
+
+<div id="content">
+<h1>Detailed Information</h1>
+<b>Appearance</b><br>
+Winter is a tad shorter than most other females of her race. Firstborn Sidhes are essentially the embodiments of what mankind as a race perceives to be “perfection” in their own image, often leaving them fairly thinned and toned. Winter is no exception, having a slight shapely figure, slender shoulders curving down into her somewhat small waist, and then curves back out enough to give a solid distinction between her waist and her hips. She is blessed with longer than average legs, allowing her take longer and faster strides while remaining fairly petite and fleet-footed. There are barely noticeable muscles around her midsection and her triceps, covered by a layer of porcelain fair flesh. Her fingers are of average length and size, but are calloused at the fingerpads due to years of playing instruments while trying to find some sort of way to distract herself from the loss of much of her magic.<br>
+Long, wavy silver hair falls around her angelic features, framing her face while falling down to the middle of her back in loose waves rather than curls. Prominent cheekbones and a slightly narrow jawline creates her rounded facial features. She sports slender brows which are slightly arched, full pink lips, and a kind of upturned nose. Her almond shaped eyes are a deep shade of icy blue, dark lashes lining them to give them a shaded appearance that one would normally get from a light appliance of eyeliner. From the sides of her head can be seen a pair of point elvish ears, almost always jutting out from her silver locks and can be described as one of her most noticeable features aside from her piercing eyes. She is undoubtedly a fairly pretty individual. Speaking of pretty pictures, like every variation of Sidhe Winter has tribal tattoo-like birthmarks that span across her entire back in the shape of a bird's wings. (Kinds of wings vary between individuals.) <br><br>
+<b>Personality</b><br>
+Like all of the Firstborn Sidhe's Winter was designed by the dream as cold and unforgiving, like a devastating winter storm. Yet she still yearns for love and friendship and shows great compassion. While not weaseling away from meeting new people, Winter is definitely shy. If she feels crowded or overwhelmed she has a tendency to fall apart and retreat into a mental bubble to escape whatever it is that's troubling her. Often seeming timid she is actually completely opposite, showing courage and strength at times where it is needed the most.<br>
+She loves strongly and forms attachments quite quickly, and these intense emotions can drive her to do anything in her power to defend those she loves or calls a friend. Despite being kind, injuring or threatening her loved ones can turn her into a vengeful force that stops at nothing to achieve her revenge.
+</div>
+<div id="picbox">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/d7ecJOT.jpg"/>
+</div>
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab2')">1</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab3');changeNavigation1 ('tab4')">2</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab5');changeNavigation1 ('tab6')">3</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab7');changeNavigation1 ('tab8')">4</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab9');changeNavigation1 ('tab10')">5</span>
+</div>
+<div id="title">
+Northern Faerie
+</div>
+<div id="basicbox">
+<h1>Basic Information</h1>
+<b>Name:</b> Winter<br>
+<b>Age:</b> Unknown, considered Immortal<br>
+<b>Gender:</b> Female<br>
+<b>Species:</b> Fae<br>
+<b>Race:</b> Northern Sidhe<br>
+<b>Rank:</b> Paige<br>		
+</div>
+
+<div id="tab1">
+<h1>History</h1>
+<p align="center"><b>The Faerie Realms</b><p align="left"><br>
+Magic always existed across the vast multiverse, shaping and forming worlds, causing creatures to adapt during evolution and take all new heights. Among these phenomena, there was one species that was as common as magic itself, and that species was known as the Human Race. Humans had the ability to access magic from the beginning--they developed mana pools within their body--but the birth of the Faerie Realms happened back before they knew how to draw on the ambient mana of the world, and the magic that naturally resided within themselves.<br><br>
+While humans continued to spread their own throughout the planes of existence, making them more and more consistently common in the multiverse, their mana went unused and began building up. Explorers and breeders became dreamers, and their nights were filled with images of objects and events they strongly desired. Their built up mass of unused mana began responding to their dreams, and as a result influenced their intense desires and emotions causing a tumor-like growth of magic where all of their mana fed dreams and thoughts conglomerated together into a single mass. An influx of energy triggered a massive explosion, but when the metaphorical smoke cleared an entire new world was revealed. This was the Faerie Realms, a mystical place that looked and behaved like a paradise! <br><br>
+From the same burst came the first natives to these lands, the Fae, or Faeries. An entire race of varying creatures with different sub-species, born from what they call “The Dream” which was the collective of mankind’s magic imbued thought. They banded together to form a society, dividing themselves into four kingdoms, and the cultures of which varied vastly. Regardless of who a Faerie was and where in their world they resided, all of the Firstborns--those born directly from The Dream itself--experienced the same kind of awakening. An entire predetermined “backstory,” giving them personality, skills, and morals, was shown to them in a dreamlike state, and then they opened their eyes for the first time and simply existed, everything set in place as though they picked right up where The Dream left off. Many soon came to discover that defying The Dream in extremist ways led to them becoming twisted dark versions of themselves, causing the beginning of a worldwide religion known as The Path. Should a Faerie stray from what their Dream showed them to be, they might end up facing severe repercussion via their own laws of nature. Before long fear would drive this religion to become forced with borderline tyrannical methods.<br><br>
+<p align="center"><b>Winter</b><p align="left"><br>
+As with all of the other Firstborns, when Winter's eyes first opened she found herself inside of a small wooden cottage deep in the northern lands of the kingdom of Murias. Icy blue eyes scanned her features, taking it all in for the first time. She noticed that she was fairly lithe and athletically inclined, slightly visible abdominal muscles poking out from her otherwise flat mid-section. Standing up from her bed she examining her home she realized that she lived alone, no one to accompany her as snow and freezing winds berated the small building. There were ornate dishes which lined cabinets in what she assumed to be her place of dining and cooking, a wooden table with a singular chair. Despite living alone, she yearned for other people. The sounds of animals grabbed her attention from outside of her cottage.<br>
+Pulling a leather coat over her body to keep her porcelain fair flesh warm in the cooler conditions she pushed past the door that would lead her outside. Her silver hair began whirling around her body as the wind hit her, snow sticking to her. It was cold, and anyone else may have found it uncomfortable, but it was a soothing feeling for her, like someone was embracing her. Moving in the direction of the noise she came across an equally as large building as her cottage and inside she found several equine animals. They greeted her with excited neighs, their ebony heads turning in her direction. It seemed that she was some sort of animal caretaker or breeder. This gave her an idea. She wished to explore the world and meet others, and this was her chance! Undoing the tethers that kept the horses tied inside of their stables, she'd use those tethers to fashion a chain of sorts and linked all of the horses together. Leading them outside she'd mount the centermost horse, tying those leather tethers around each horses's chest so that they would all move in the same direction and she wouldn't be at risk of losing one of them. Then, bags of food, clothing, and water hanging from the remaining horses' sides, she'd set out and away from her home.<br><br>
+Winter was a gifted Cryomancer, commanding the snow that came with the storm to pass by them harmlessly, refusing to let her animals suffer from the cold. For weeks she traveled, soon leaving the snow-ridden lands and entering a place more sunny than she had ever seen before. Fields of snowy grass and flowers lined a pathway which lead to a massive settlement of other Faerie creatures. Thornavale, it was called, the jewel of Murias. She was able to score a new home for herself and her animals, letting them roam within the fenced off field to eat and rest in the sun while she explored the city. There was such a wide variety of Faerie creatures that it would have been impossible for Winter to name them all. Everyone seemed to respect each other, treating each other equally, forming one supportive community. It was almost a complete utopia for years until one day giant holes were ripped in reality itself, creatures of "Good" and "Evil" spewing from them.<br><br>
+At first they fought against each other and the Fae, until enough land had been conquered for them to send natives out to fight for their selfish causes. Much of the damage was brought upon the Eastern kingdom of Gorias, even if all of the kingdoms received similar damage. Murias refused to send troops to assist the other kingdoms, stirring emotions inside of Winter that she didn't know she had. Out of personal morals she left her kingdom to assist Gorias. Clad in armor, something she never thought she'd wear, Winter used her power to wreak icy havoc upon them to free innocent lives from their clutches. It went on for months until finally the enemy forces simply grew too vast and the Fae were shoved out of the territory and hunted. Winter managed to escape a band of "Evil" aspects and came across a group of survivor rogue Faeries who managed to stay outside the control of the warring factions. Eventually a betrayal among those who were “Good” lead to the downfall of their army, and the intruding fraction if their civilization, leaving the “Evil” victorious and giving them domain over the conquered lands. They left ownership to the traitors as a reward for their backstabbing ways, and removed themselves, leaving a cruel race of fallen individuals known as Xinks. Once Angelic, now Demonic, they ruled with extreme prejudice, slaughtering natives by the thousands or dragging them en masse into underground torture dungeons. <br>
+A group of survivors became a revolutionary army of those who wished to protect the freedoms of their own people. Winter was among this group, supporting her allies with powerful barricades of ice and snow, her personality altered from compassionate to icy and battle-hardened. Now, she was truly worthy of her name. The man who had started it all, the twin brother to one of the Fae within their group, would be their downfall. He schemed with the Xinks in secret, driven mad and desperate for the chance to hold his lost lover one last time, trading not only his twin sister but the entire revolutionary army’s base camp, for the pregnant corpse of his forbidden wife. <br><br>
+In the fight that ensued Winter was hit by a powerful blast of concussive magic that shot her straight out of the Faerie Realms, placing her in an inescapable limbo for what could have been an eternity until finally she reappeared into a foreign world with little memory of what had sent her there. She remembered things like her name, and where she was from, but everything else was a blur past the moment of the Revolution's betrayal. One of her worst fears had come true: Her ability to use magic was greatly reduced, unable to produce even a fraction of what her previous magical standing had been. Years after being stuck in this magical block, barely able to produce sparks of mana, she received a letter addressed to her specifically inviting her to a University in which she could practice and hone her magic. Seeing this as a once in a lifetime opportunity to regain her strength, she gratefully took the invitation, embarking on her journey to redemption.
+
+</div>
+<div id="tab2">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/XpXc6oh.jpg"/>
+</div>
+
+<div id="tab3">
+<h1>Inventory</h1>
+<p align="center"><b>Items</b><p align="left"><br>
+<font color="#c4c4c4">Sapphire Necklace<font color="#FFFFFF"><br>
+Having been 'born' into existence wearing this necklace, it never leaves Winter's person. It is constructed out of a simple metal chain, a small deep sapphire cut to fit perfectly into the rings of metal that secure it into place.<br><br>
+<font color="#c4c4c4">Herb Bag<font color="#FFFFFF"><br>
+A small leather satchel that can be filled with varying herbs and plants to make them easily transportable. Generally she keeps this bag full of things like medicinal flowers, plants and roots.<br><br>
+<font color="#c4c4c4">Leather Sheathe<font color="#FFFFFF"><br>
+A tan leather sheathe constructed perfectly to fit the shape of her scimitar, a leather strap positioned towards the underside of the sheathe to be wrapped around the pommel and secure it in place. This strap can easily be undone without having to spend time unwrapping it since the clasp mechanism locks it to keep it still but will give way to a little bit of pressure. This sheathe comes with a leather waist strap to keep it on her person, adjustable to fit her figure and keep it from falling off.<br><br>
+<p align="center"><b>Weapons</b><p align="left"><br>
+<font color="#c4c4c4">Scimitar<font color="#FFFFFF"><br>
+A two foot long blade of sharpened iron with a seven inch handle which has finger-like grooves on it to fit her grip. The blade itself curves into a slight crescent shape, the tip angling downwards for a small section before turning back up into a somewhat triangular shape.<br><br>
+<p align="center"><b>Armor</b><p align="left"><br>
+None
+</div>
+<div id="tab4">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/q4yUGpl.jpg"/>
+</div>
+
+<div id="tab5">
+<h1>Mana Manipulation</h1>
+<font color="#c4c4c4">Mana Manipulation<font color="#FFFFFF"><br>
+The most basic class of magic, involving the direct manipulation of Mana, and is available to all mages. Raw Mana is a mundane source of magic with no special qualities, but offers some level of versatility. The amount of Mana a mage is capable of replenishing or expelling is dependent on their overall level.<br><br>
+<font color="#c4c4c4">What are Universal Spells?<font color="#FFFFFF"><br>
+Universal Spells are spells taught by teachers that any mage can learn no matter their tree as long as their current rank is high enough to learn it.<br><br>
+<font color="#c4c4c4">Personalized Mana<font color="#FFFFFF"><br>
+Winters mana when visible to the naked eye ( when mana is actively being used ) appears as an aura of a light shade of blue. This is much more noticeable when using spells like Show of Power.<br>
+--- <i>The color blue is often associated with depth and stability. It symbolizes trust, loyalty, wisdom, confidence, intelligence, faith, truth, and heaven. Blue is considered beneficial to the mind and body. It slows human metabolism and produces a calming effect. Blue is strongly associated with tranquility and calmness. In heraldry, blue is used to symbolize piety and sincerity.</i><br><br>
+<p align="center"><b>Universal Spells</b><p align="left"><br>
+<font color="#c4c4c4">Mana Weave<font color="#FFFFFF"><br>
+The simple act of moving one's mana pool through their own body. Channeling one's mana.<br><br>
+<font color="#c4c4c4">Mana Spark<font color="#FFFFFF"><br>
+A basic mana projectile that can be used offensively or defensively. It causes no real damage other than a small sting when hit directly in the flesh.<br><br>
+</div>
+<div id="tab6">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/BSgqiPj.png"/>
+</div>
+
+<div id="tab7">
+<h1>Cryomancy; Paige</h1>
+<i>"A subcategory of the Elementalism tree, a tree in which the mage harnesses the elemental powers of the world such as earth, air, water, and fire, Cryomancy is the act of creating ice, snow, and even manipulating the temperature to reach the extreme negative degrees. Even though they may not start off inherently strong, their strength comes in the ability to create durable ice constructs and sudden temperature drops that could rival absolute zero."</i><br><br>
+<font color="#c4c4c4">Thermal Exchange<font color="#FFFFFF"><br>
+When this spell is cast it turns the caster's hand as a thermal vacuum, drawing in the warm air and expelling frigid air in the process. This causes the temperature within a ten foot radius of the caster to suddenly begin to drop, starting slowly and gaining in speed over time to drop the temperature around them to about thirty two degrees fahrenheit. This is cold enough to begin freezing unheated liquids and can induce chills to those who are not dressed for cold weather. Those wearing non-insulated metals or those who have a weakness to cold will be hit harder than a normal human would. Metals will become extremely cold and will stick to warm sweaty flesh like if someone licked a frozen telephone pole and a person with cold weaknesses will experience extreme chills. Thermal exchange lasts for three posts, reaching freezing temperatures upon the third and then goes on a one post cool down timer.<br><br>
+<font color="#c4c4c4">Flurry<font color="#FFFFFF"><br>
+After charging for one post a flurry of thick chunks of snow will begin shooting out from the caster's palms at the same speed as one would be able to throw something overhand. These chunks of snow will stick to the things they touch like glue but can easily be pried off with minimal force. At the speed of which they travel, getting hit by some of the snowballs can feel like getting hit by a baseball tossed at a medium speed. On their own they can't really harm the body aside from light bruising, but consecutive hits can damage weaker bones like ribs or the nose. Flurry does not have a set amount of snowballs able to be shot and instead drains mana repeatedly for as long as the spell is active and can completely drain a paige's mana pool in three posts.<br><br>
+<font color="#c4c4c4">Flash Freeze<font color="#FFFFFF"><br>
+Rather than generate snow or drop temperatures, this spell allows the caster to turn any of their own snow into ice, the particles of frozen water that construct the snow locking together in a more crystalline shape and solidifying into tin-grade ice. This can only happen so long as the snow is within ten feet of the caster, and if their own snow has been in contact with the target's body for over one post. The ice can easily be broken or melted via anything that can break/melt through tin constructs. Only small amounts of this ice may be formed at one time, barely just enough to cover the limb of an average-sized human being<br><br>
+</div>
+<div id="tab8">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/G072mu9.png"/>
+</div>
+
+<div id="tab9">
+<h1>Magus Manatism; Paige</h1>
+<i>"The epitome of mana manipulation. Those that take this tree end up taking their skills in this art to levels so ridiculous they can solidify their mana into all shapes and sizes. Manatists start off with an advanced form of mana manipulation that makes them just a bit more adept at Paige rank with their skill than others. This of course doesn't stop being a fact as they rank up and as they learn spells, but lose their edge as their peers get more experienced. With their inate ability at mana manipulation, they are able to learn universal spells that are meant for those a rank above them and below.  Without a question of a doubt, their trump card comes in the form of an advanced form of mana, the purest a mage could possibly make. Arcane energy is a very volatile and destructive force, one that takes much time to master but is fully worth the journey from Expert Mage to the upper ranks available to mages. Some even say its power cannot be matched at its zenith."</i><br><br>
+</div>
+<div id="tab10">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/ZRjyNcT.jpg"/>
+</div>
